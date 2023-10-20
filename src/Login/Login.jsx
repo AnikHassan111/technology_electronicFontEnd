@@ -33,7 +33,7 @@ const Login = () => {
         <div className="max-w-7xl mx-auto ">
             <div>
                 <div className="hero max-w-7xl mx-auto mt-5">
-                    <form onSubmit={handleLogin} className="w-2/4">
+                    <form onSubmit={handleLogin} className="md:w-2/4 ">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-bold">Email</span>

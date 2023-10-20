@@ -4,6 +4,10 @@ import Error from "./Error/Error";
 import Login from "./Login/Login";
 import Register from "./Register/Register";
 import Home from "./Home/Home";
+import AddProduct from "./AddProduct/AddProduct";
+import About from "./About/About";
+import BrandProduct from "./BrandProduct/BrandProduct";
+import BrandProductDetails from "./BrandProduct/BrandProductDetails";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +26,26 @@ const router = createBrowserRouter([
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+          path:'/addProduct',
+          element:<AddProduct></AddProduct>
+        },
+        {
+          path:'/about',
+          element:<About></About>
+        },
+        {
+          path:'/:brandName',
+          element:<BrandProduct></BrandProduct>,
+          loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
+          
+        },
+        {
+          path:'/productDetaisl/:id',
+          element:<BrandProductDetails></BrandProductDetails>,
+          loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
+          
         }
       ]
     },

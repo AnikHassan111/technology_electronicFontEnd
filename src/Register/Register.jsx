@@ -67,7 +67,7 @@ const Register = () => {
         <div>
             <div>
                 <div className="hero max-w-7xl mx-auto mt-5">
-                    <form onSubmit={handleRegister} className="w-2/4">
+                    <form onSubmit={handleRegister} className="md:w-2/4  ">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-bold">Name</span>
