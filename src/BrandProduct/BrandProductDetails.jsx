@@ -7,7 +7,7 @@ const BrandProductDetails = () => {
     let brandData = data.filter(name => name._id == pramsData.id)
     
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto mt-5">
             {
                 brandData.map(data => <BrandProductDetailsCard key={data._id} data={data}></BrandProductDetailsCard>)
             }

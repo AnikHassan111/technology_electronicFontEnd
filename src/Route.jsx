@@ -8,6 +8,7 @@ import AddProduct from "./AddProduct/AddProduct";
 import About from "./About/About";
 import BrandProduct from "./BrandProduct/BrandProduct";
 import BrandProductDetails from "./BrandProduct/BrandProductDetails";
+import PriventRoute from "./PriveteRoute/PriventRoute";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/addProduct',
-          element:<AddProduct></AddProduct>
+          element:<PriventRoute><AddProduct></AddProduct></PriventRoute>
         },
         {
           path:'/about',
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/productDetaisl/:id',
-          element:<BrandProductDetails></BrandProductDetails>,
+          element:<PriventRoute><BrandProductDetails></BrandProductDetails></PriventRoute>,
           loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
           
         }

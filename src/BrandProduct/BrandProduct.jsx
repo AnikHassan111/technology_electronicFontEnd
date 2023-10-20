@@ -9,7 +9,7 @@ const BrandProduct = () => {
     console.log('sdfjsdf', brandData);
 
     return (
-        <div className="grid grid-cols-2 max-w-5xl mx-auto gap-10 mt-10">
+        <div className="grid md:grid-cols-2 grid-cols-1 mx-5 max-w-5xl md:mx-auto gap-10 mt-10">
             {
                 brandData.map(product => <BrandPrductCard key={product._id} data={product}></BrandPrductCard>)
             }
