@@ -10,6 +10,7 @@ import BrandProduct from "./BrandProduct/BrandProduct";
 import BrandProductDetails from "./BrandProduct/BrandProductDetails";
 import PriventRoute from "./PriveteRoute/PriventRoute";
 import MyCart from "./MyCart/MyCart";
+import ProductUpdate from "./ProductUpdate/ProductUpdate";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
           element:<PriventRoute><BrandProductDetails></BrandProductDetails></PriventRoute>,
           loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
           
+        },
+        {
+          path:'/productUpdate/:id',
+          element:<ProductUpdate></ProductUpdate>,
+          loader:({params})=>fetch(`http://localhost:5000/updateproduct/${params.id}`)
         }
       ]
     },
