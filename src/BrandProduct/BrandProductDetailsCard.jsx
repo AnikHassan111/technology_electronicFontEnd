@@ -1,14 +1,37 @@
 import { useContext } from "react";
 import { ContextApi } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const BrandProductDetailsCard = ({ data }) => {
     let {user} = useContext(ContextApi) 
-    console.log(user);
+    console.log(user.email);
+    let userEmail = user.email
     console.log(data);
-    let { brandName, imageValue, name, price, producttype, rating, shrotDescription } = data
+    let { brandName, imageValue, name, price, producttype, rating, shrotDescription,_id } = data
     let obj = {
-        brandName, imageValue, name, price, producttype, rating, shrotDescription,
+        brandName, imageValue, name, price, producttype, rating, shrotDescription,userEmail,_id
+    }
+// acknowledged
+    const handleClickAddCart = e =>{
+        fetch(`http://localhost:5000/addCart`,{
+            method:"POST",
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body:JSON.stringify(obj)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.acknowledged){
+                Swal.fire({
+                    title: 'success',
+                    text: 'Add Product Successfull',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
+                }
+        })
     }
 
     return (

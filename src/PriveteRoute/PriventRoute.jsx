@@ -21,5 +21,5 @@ const PriventRoute = ({ children }) => {
 export default PriventRoute;
 
 PriventRoute.propTypes = {
-    children: PropTypes.object
+    children: PropTypes.node
 }

@@ -9,6 +9,8 @@ import About from "./About/About";
 import BrandProduct from "./BrandProduct/BrandProduct";
 import BrandProductDetails from "./BrandProduct/BrandProductDetails";
 import PriventRoute from "./PriveteRoute/PriventRoute";
+import MyCart from "./MyCart/MyCart";
+
 
 const router = createBrowserRouter([
     {
@@ -41,6 +43,12 @@ const router = createBrowserRouter([
           element:<BrandProduct></BrandProduct>,
           loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
           
+        }
+        ,
+        {
+          path:'/myCart',
+          element:<PriventRoute><MyCart></MyCart></PriventRoute>,
+          loader:() => fetch('http://localhost:5000/myCart')
         },
         {
           path:'/productDetaisl/:id',
