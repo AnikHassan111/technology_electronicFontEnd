@@ -7,7 +7,6 @@ const ProductUpdate = () => {
     let [select, setSelect] = useState('')
 
     let data = useLoaderData()
-    // console.log(data);
 
     let {brandName, name,imageValue,price,producttype,shrotDescription,rating,_id} = data
     let [bb,setBB] = useState(brandName)
@@ -24,8 +23,6 @@ const ProductUpdate = () => {
 
         let productObj = { name, brandName, imageValue, price, producttype, shrotDescription, rating }
 
-
-        console.log(productObj);
 
         fetch(`http://localhost:5000/updateproduct/${_id}`, {
             method: "PUT",

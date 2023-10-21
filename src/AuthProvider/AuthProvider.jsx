@@ -7,11 +7,10 @@ import {  toast } from 'react-toastify';
 export let ContextApi = createContext(null)
 
 const AuthProvider = ({ children }) => {
-
+    
     let [user, setUser] = useState(null)
     let [loading,setLoading] = useState(true)
-
-
+    
     const handleUserCreate = (email, password,) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -57,7 +56,9 @@ const AuthProvider = ({ children }) => {
         handleGoogleLogin,
         user,
         logOut,
-        loading
+        loading,
+
+
     }
     return (
         <ContextApi.Provider value={obj}>

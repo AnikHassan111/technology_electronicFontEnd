@@ -8,10 +8,17 @@ const BrandProduct = () => {
     let brandData = data.filter(name => name.brandName == pramsData.brandName)
 
     return (
-        <div className="grid md:grid-cols-2 grid-cols-1 mx-5 max-w-5xl md:mx-auto gap-10 mt-10">
-            {
-                brandData.map(product => <BrandPrductCard key={product._id} data={product}></BrandPrductCard>)
-            }
+        <div>
+            <div>
+
+            </div>
+            <div className="grid md:grid-cols-2 grid-cols-1 mx-4 max-w-5xl md:mx-auto gap-10 mt-10">
+
+                {
+                    brandData.length > 0 ? brandData.map(product => <BrandPrductCard key={product._id} data={product}></BrandPrductCard>)
+                        : <p className="text-5xl font-semibold">Product Not Available</p>
+                }
+            </div>
         </div>
     );
 };
