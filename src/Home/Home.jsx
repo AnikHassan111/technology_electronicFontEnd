@@ -8,7 +8,7 @@ const Home = () => {
     let [brandData, setBrandData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/brandName')
+        fetch('https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/brandName')
             .then(res => res.json())
             .then(data => setBrandData(data))
     }, [])

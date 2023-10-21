@@ -20,7 +20,7 @@ const AddProduct = () => {
 
         console.log(productObj);
 
-        fetch('http://localhost:5000/addproduct',{
+        fetch('https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/addproduct',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

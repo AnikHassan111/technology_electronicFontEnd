@@ -19,7 +19,7 @@ const MyCartCard = ({ data, setAllCart, allCard }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/cartitem/${_id}`, {
+                fetch(`https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/cartitem/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

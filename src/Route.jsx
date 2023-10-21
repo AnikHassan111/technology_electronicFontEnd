@@ -42,25 +42,25 @@ const router = createBrowserRouter([
         {
           path:'/:brandName',
           element:<BrandProduct></BrandProduct>,
-          loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
+          loader:({params})=>fetch(`https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/brandProduct`)
           
         }
         ,
         {
           path:'/myCart',
           element:<PriventRoute><MyCart></MyCart></PriventRoute>,
-          loader:() => fetch('http://localhost:5000/myCart')
+          loader:() => fetch('https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/myCart')
         },
         {
           path:'/productDetaisl/:id',
           element:<PriventRoute><BrandProductDetails></BrandProductDetails></PriventRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/brandProduct`)
+          loader:({params})=>fetch(`https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/brandProduct`)
           
         },
         {
           path:'/productUpdate/:id',
           element:<PriventRoute><ProductUpdate></ProductUpdate></PriventRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/updateproduct/${params.id}`)
+          loader:({params})=>fetch(`https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/updateproduct/${params.id}`)
         }
       ]
     },

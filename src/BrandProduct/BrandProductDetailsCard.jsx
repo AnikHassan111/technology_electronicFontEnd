@@ -14,7 +14,7 @@ const BrandProductDetailsCard = ({ data }) => {
     }
 // acknowledged
     const handleClickAddCart = e =>{
-        fetch(`http://localhost:5000/addCart`,{
+        fetch(`https://product-brand-di2oquojb-anik-hassans-projects.vercel.app/addCart`,{
             method:"POST",
             headers:{
                 'content-type' : 'application/json'
