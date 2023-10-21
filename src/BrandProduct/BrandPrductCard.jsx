@@ -11,7 +11,7 @@ const BrandPrductCard = ({data}) => {
                     <h2 className="card-title">{name}</h2>
                     <div className="flex justify-between">
                     <Link  to={`/productDetaisl/${_id}`} className="py-2 px-4 text-white bg-gray-700 rounded-lg text-center">Show Details</Link>
-                    <button>sdf</button>
+                    
                     </div>
                 </div>
             </div>

@@ -4,10 +4,9 @@ import Swal from "sweetalert2";
 const MyCartCard = ({ data, setAllCart, allCard }) => {
     let { imageValue, name, _id } = data
 
-    console.log(_id);
 
 
-    const handleDeleteCard = id => {
+    const handleDeleteCard = () => {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
