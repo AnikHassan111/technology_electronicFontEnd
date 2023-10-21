@@ -35,6 +35,7 @@ const MyCartCard = ({ data, setAllCart, allCard }) => {
                         }
 
                     })
+                    console.log('sdhsljhf');
             }
         })
     }

@@ -5,7 +5,7 @@ const About = () => {
     let [brandData, setBrandData] = useState([])
 
     useEffect(() => {
-        fetch('brandName.json')
+        fetch('http://localhost:5000/brandName')
             .then(res => res.json())
             .then(data => setBrandData(data))
     }, [])
@@ -13,7 +13,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto mt-10">
             
             {
-                brandData.map(brand => <AboutCard key={brand.id} data={brand}></AboutCard>)
+                brandData.map(brand => <AboutCard key={brand._id} data={brand}></AboutCard>)
             }
         </div>
     );
